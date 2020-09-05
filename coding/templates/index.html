@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Register</title>
+    <style>
+      body{text-align:center;
+        background-color: #7f5a83;
+        background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+      }
+      h1{
+        font-size:25px;
+        font-style: italic;
+
+      }
+      hr.new1{
+        border: 2px solid black;
+      }
+      
+      #reg{
+        width:50%;
+        height:75%;
+        margin: auto;
+        border:5px solid black;
+        border-radius:5px;
+        background-color: #eec0c6;
+        background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+        padding:20px;
+      }
+
+    </style>
+  </head>
+  <body>
+       <div class="container mt-4">
+        <form id="reg" action="/#" method="post">{% csrf_token %}
+          <h1>Registration Form</h1>
+          <hr class="new1">
+            
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name"id="name"required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email"id="email" required>
+              </div>
+            
+            <div class="form-group">
+              <label for="num">Phone</label>
+              <input type="number" class="form-control" id="num"name="num"required>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="age">Age</label>
+                <select id="age" name="age"class="form-control"required>
+                  <option selected>Choose...</option>
+                  <option>0-9</option>
+                  <option>10-19</option>
+                  <option>20-29</option>
+                  <option>30-39</option>
+                  <option>40-49</option>
+                  <option>50-59</option>
+                  <option>60-69</option>
+                  <option>70-79</option>
+                  <option>80-89</option>
+                  <option>90-99</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state">State</label>
+                <select id="state" name="state" class="form-control" required>
+                  <option selected>Choose...</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Telangana</option>
+                  <option>karnataka</option>
+                  <option>Delhi</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="country">Country</label>
+                <select id="country" name="country" class="form-control"required>
+                  <option selected>Choose...</option>
+                  <option>India</option>
+                  <option>Russia</option>
+                  <option>Japan</option>
+                  <option>USA</option>
+                  <option>France</option>
+                </select>
+              </div>
+              
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+          </form>
+       </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
